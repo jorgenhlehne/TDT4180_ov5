@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -48,12 +48,12 @@
                <children>
                   <AnchorPane layoutX="10.0" layoutY="15.0" prefHeight="250.0" prefWidth="315.0" style="-fx-background-color: #e7e7e7;">
                      <children>
-                        <ScrollPane layoutY="69.0" prefHeight="200.0" prefWidth="315.0" />
                         <Text layoutX="19.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mine Lag">
                            <font>
                               <Font size="21.0" />
                            </font>
                         </Text>
+                        <ListView fx:id="teamListView" layoutX="-8.0" layoutY="47.0" prefHeight="250.4" prefWidth="315.2" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="65.0" />
                      </children></AnchorPane>
                   <AnchorPane layoutX="10.0" layoutY="300.0" prefHeight="120.0" prefWidth="315.0" style="-fx-background-color: #e7e7e7;">
                      <children>

@@ -3,7 +3,16 @@ package frontend;
 import java.io.IOException;
 import javafx.fxml.FXML;
 
+import javafx.scene.control.ListView;
+
 public class LagController {
+	
+	@FXML private ListView<String> teamListView;
+	
+	@FXML
+	void initialize() {
+		
+	}
 	
 	@FXML
 	public void gotoHome() throws IOException {
