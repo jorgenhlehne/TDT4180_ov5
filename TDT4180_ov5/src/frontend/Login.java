@@ -22,11 +22,10 @@ public class Login extends Application {
         loadApp();
     }
     
-    public void loadApp() throws Exception{
-    	Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
+    public static void loadApp() throws Exception{
+    	Parent root = FXMLLoader.load(Login.class.getResource("Login.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);
-        stage.setTitle("MOSJON");
         stage.show();
     }
     
@@ -34,8 +33,12 @@ public class Login extends Application {
     	Parent root = FXMLLoader.load(Login.class.getResource("Home.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);
-        stage.setTitle("MOSJON");
-        stage.show();
+    }
+    
+    public static void gotoSettings() throws IOException {
+    	Parent root = FXMLLoader.load(Login.class.getResource("Settings.fxml"));
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
     }
 
     public static void main(String[] args) {

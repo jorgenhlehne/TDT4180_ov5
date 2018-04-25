@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <BorderPane prefHeight="600.0" prefWidth="335.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <top>
@@ -29,13 +29,14 @@
                <children>
                   <AnchorPane layoutX="132.0" layoutY="12.0" prefHeight="60.0" prefWidth="80.0">
                      <children>
-                        <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="80.0" />
-                        <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="30.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../user.png" />
-                           </image>
-                        </ImageView>
-                        <Text layoutX="24.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hjem" />
+                        <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="80.0">
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/Home.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
                      </children>
                   </AnchorPane>
                </children>
@@ -55,12 +56,12 @@
                      </children></AnchorPane>
                   <AnchorPane layoutX="10.0" layoutY="300.0" prefHeight="120.0" prefWidth="315.0" style="-fx-background-color: #e7e7e7;">
                      <children>
-                        <Text layoutX="25.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fin Lag">
+                        <Text layoutX="25.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Finn Lag">
                            <font>
                               <Font size="21.0" />
                            </font>
                         </Text>
-                        <TextField layoutX="25.0" layoutY="47.0" prefHeight="49.0" prefWidth="206.0" promptText="Lag navn">
+                        <TextField layoutX="25.0" layoutY="47.0" prefHeight="49.0" prefWidth="206.0" promptText="Lagnavn">
                            <font>
                               <Font size="16.0" />
                            </font>
