@@ -40,6 +40,24 @@ public class Login extends Application {
         Scene scene = new Scene(root);
         stage.setScene(scene);
     }
+    
+    public static void gotoTeams() throws IOException {
+    	Parent root = FXMLLoader.load(Login.class.getResource("Lag.fxml"));
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+    }
+    
+    public static void gotoUsers() throws IOException {
+    	Parent root = FXMLLoader.load(Login.class.getResource("UserSearch.fxml"));
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+    }
+    
+    public static void gotoTrophies() throws IOException {
+    	Parent root = FXMLLoader.load(Login.class.getResource("Medaljer.fxml"));
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+    }
 
     public static void main(String[] args) {
         launch(args);

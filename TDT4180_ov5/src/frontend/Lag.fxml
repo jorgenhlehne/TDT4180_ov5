@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="frontend.LagController">
    <children>
       <BorderPane prefHeight="600.0" prefWidth="335.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <top>
@@ -21,6 +21,7 @@
                         <Font size="28.0" />
                      </font>
                   </Text>
+                  <Button fx:id="newTeamButton" layoutX="228.0" layoutY="17.0" mnemonicParsing="false" onAction="#newTeam" prefHeight="45.0" text="Opprett Lag" />
                </children>
             </AnchorPane>
          </top>
@@ -29,7 +30,7 @@
                <children>
                   <AnchorPane layoutX="132.0" layoutY="12.0" prefHeight="60.0" prefWidth="80.0">
                      <children>
-                        <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="80.0">
+                        <Button fx:id="homeButton" mnemonicParsing="false" onAction="#gotoHome" prefHeight="60.0" prefWidth="80.0">
                            <graphic>
                               <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -61,12 +62,12 @@
                               <Font size="21.0" />
                            </font>
                         </Text>
-                        <TextField layoutX="25.0" layoutY="47.0" prefHeight="49.0" prefWidth="206.0" promptText="Lagnavn">
+                        <TextField fx:id="searchTeamTextfield" layoutX="25.0" layoutY="47.0" prefHeight="49.0" prefWidth="206.0" promptText="Lagnavn">
                            <font>
                               <Font size="16.0" />
                            </font>
                         </TextField>
-                        <Button layoutX="239.0" layoutY="49.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="62.0" text="Søk">
+                        <Button fx:id="searchTeamButton" layoutX="239.0" layoutY="49.0" mnemonicParsing="false" onAction="#searchTeams" prefHeight="45.0" prefWidth="62.0" text="Søk">
                            <font>
                               <Font size="17.0" />
                            </font>
