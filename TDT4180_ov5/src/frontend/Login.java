@@ -14,8 +14,10 @@ public class Login extends Application {
 	
 	private static Stage stage;
 	
+	//Oppretter en fake database for å lagre data, kan bli accessed fra overalt i koden
 	public static DbFake database = new DbFake();
 	
+	//Tilegner personen som bruker appen et brukerobjekt, kan bli accessed fra overalt i koden
 	public static Bruker currentUser = new Bruker(1, "TestBruker", 0);
 	
 	//Kjoer denne filen for aa launche appen
@@ -29,7 +31,8 @@ public class Login extends Application {
     }
     
     
-    
+    //Foelgende funksjoner laster inn de forskjellige vinduene og brukes av
+    //alle de forskjellige controllerene
     public static void loadApp() throws Exception{
     	Parent root = FXMLLoader.load(Login.class.getResource("Login.fxml"));
         Scene scene = new Scene(root);

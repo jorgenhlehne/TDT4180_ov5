@@ -8,7 +8,8 @@ public class Bruker
     public int id;
     public String navn;
     public Konkuranse individualCompetition, teamCompetition;
-    private List<LagBackend> teamList;
+    private List<LagBackend> teamListMember; //Lag man er medlem av
+    private List<LagBackend> teamListAdmin; //Lag man er admin for
     public int skritt;
 
     public Bruker(int nyId, String nyttNavn, int nySkritt)
@@ -18,7 +19,8 @@ public class Bruker
         individualCompetition = null;
         teamCompetition = null;
         skritt = nySkritt;
-        teamList = new ArrayList<LagBackend>();
+        teamListMember = new ArrayList<LagBackend>();
+        teamListAdmin = new ArrayList<LagBackend>();
     }
     
     public void joinIndividualCompetition(Konkuranse konkurranse) {

@@ -13,14 +13,14 @@ public class HomeController {
 	
 	@FXML
 	void initialize() throws IOException {
-		if (false) {
+		if (Login.currentUser.individualCompetition != null) {
 			AnchorPane raceCard = FXMLLoader.load(getClass().getResource("RaceCard.fxml"));
 	        individualPane.getChildren().add(raceCard);
 		} else {
 			AnchorPane noRace = FXMLLoader.load(getClass().getResource("RaceCardEmpty.fxml"));
 	        individualPane.getChildren().add(noRace);
 		}
-		if (false) {
+		if (Login.currentUser.teamCompetition != null) {
 			AnchorPane raceCard = FXMLLoader.load(getClass().getResource("RaceCard.fxml"));
 	        individualPane.getChildren().add(raceCard);
 		} else {

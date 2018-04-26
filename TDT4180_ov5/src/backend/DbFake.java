@@ -11,7 +11,7 @@ public class DbFake {
     public String[] noenSteder = {"Maanen-sola","Bejing-Moskva","Oslo-Trondheim","Samfundet-hjem","sofaen-kjoeleskapet"};
     public String[] noenLagnavn = {"LoepeGutta","LoepeJentene","SprekeFolk","Derp","NeiTilJogging"};
     
-    private List<LagBackend> teamList = new ArrayList<LagBackend>();
+    private List<LagBackend> teamList = new ArrayList<LagBackend>(); //En liste med lagobjekter
     
     public DbFake() {
     	initialize();
@@ -21,6 +21,7 @@ public class DbFake {
     	populateTeamList();
     }
     
+    //Putter lag i listen over lag
     public void populateTeamList() {
     	LagBackend lag1 = new LagBackend(noenLagnavn[1], null);
         LagBackend lag2 = new LagBackend(noenLagnavn[2], null);

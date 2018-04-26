@@ -26,6 +26,7 @@ public class NyttLagController {
 		Login.gotoTeams();
 	}
 	
+	//Lager et lag og legger til naavaerende bruker som admin
 	@FXML
 	public void createTeam() throws IOException {
 		if (newTeamName.getText().isEmpty()) {
