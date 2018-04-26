@@ -25,7 +25,14 @@
          <bottom>
             <AnchorPane prefHeight="80.0" prefWidth="200.0" style="-fx-background-color: e7e7e7;" BorderPane.alignment="CENTER">
                <children>
-                  <Button fx:id="homeButton" layoutX="128.0" layoutY="10.0" mnemonicParsing="false" onAction="#gotoHome" prefHeight="60.0" prefWidth="80.0" text="Home" />
+                  <Button fx:id="homeButton" contentDisplay="TOP" layoutX="128.0" layoutY="10.0" mnemonicParsing="false" onAction="#gotoHome" prefHeight="60.0" prefWidth="80.0" text="Home">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/Home.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
                </children>
             </AnchorPane>
          </bottom>

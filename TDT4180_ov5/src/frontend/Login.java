@@ -2,6 +2,8 @@ package frontend;
 
 import java.io.IOException;
 
+import backend.Bruker;
+import backend.DbFake;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -12,6 +14,10 @@ public class Login extends Application {
 	
 	private static Stage stage;
 	
+	public static DbFake database = new DbFake();
+	
+	public static Bruker currentUser = new Bruker(1, "TestBruker", 0);
+	
 	//Kjoer denne filen for aa launche appen
 
     @Override
@@ -21,6 +27,8 @@ public class Login extends Application {
         
         loadApp();
     }
+    
+    
     
     public static void loadApp() throws Exception{
     	Parent root = FXMLLoader.load(Login.class.getResource("Login.fxml"));
@@ -55,6 +63,12 @@ public class Login extends Application {
     
     public static void gotoTrophies() throws IOException {
     	Parent root = FXMLLoader.load(Login.class.getResource("Medaljer.fxml"));
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+    }
+    
+    public static void createNewTeam() throws IOException {
+    	Parent root = FXMLLoader.load(Login.class.getResource("NyttLag.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);
     }

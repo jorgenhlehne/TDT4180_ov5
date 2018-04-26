@@ -1,24 +1,31 @@
 package backend;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class LagBackend
 {
    public String lagNavn;
-   public Konkuranse konkuranse;
+   public Konkuranse konkurranse;
    public List<Bruker> medlemmer;
+   
+   private Bruker teamLeader;
 
 
-   LagBackend(String n)
+   LagBackend(String n, Bruker newLeader)
    {
    lagNavn = n;
+   konkurranse = null;
+   medlemmer = new ArrayList<Bruker>();
+   teamLeader = newLeader;
    }
 
-   LagBackend(String n, Konkuranse k, List<Bruker> m)
+   public LagBackend(String n, Konkuranse k, List<Bruker> m, Bruker newLeader)
    {
        lagNavn = n;
-       konkuranse = k;
+       konkurranse = k;
        medlemmer = m;
+       teamLeader = newLeader;
    }
 
    public void addMember(Bruker b)
@@ -30,6 +37,10 @@ public class LagBackend
    {
        medlemmer.remove(index);
    }
+   
+   public void removeMember(Bruker bruker) {
+	   medlemmer.remove(bruker);
+   }
 
    public String getName()
    {
@@ -38,7 +49,7 @@ public class LagBackend
 
     public Konkuranse getKonkuranse()
     {
-        return konkuranse;
+        return konkurranse;
     }
 
     public List<Bruker> getMembers()
@@ -53,6 +64,18 @@ public class LagBackend
 
     public void setKonkuranse(Konkuranse k)
     {
-        konkuranse = k;
+        konkurranse = k;
+    }
+    
+    public String toString() {
+    	return lagNavn;
+    }
+    
+    public Bruker getLeader() {
+    	return teamLeader;
+    }
+    
+    public boolean isLeader(Bruker user) {
+    	return user == teamLeader;
     }
 }

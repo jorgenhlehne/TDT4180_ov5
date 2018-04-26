@@ -1,17 +1,27 @@
 package frontend;
 
 import java.io.IOException;
+
+import backend.LagBackend;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 
 import javafx.scene.control.ListView;
 
 public class LagController {
 	
-	@FXML private ListView<String> teamListView;
+	@FXML private ListView<LagBackend> teamListView;
 	
 	@FXML
 	void initialize() {
-		
+		populateTeamList();
+	}
+	
+	@FXML
+	public void populateTeamList() {
+		ObservableList<LagBackend> teamListTemp = FXCollections.observableArrayList(Login.database.getTeams());
+		teamListView.setItems(teamListTemp);
 	}
 	
 	@FXML
@@ -21,7 +31,7 @@ public class LagController {
 	
 	@FXML
 	public void newTeam() throws IOException {
-		Login.login();
+		Login.createNewTeam();
 	}
 	
 	@FXML

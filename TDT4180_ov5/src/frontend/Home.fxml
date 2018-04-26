@@ -16,7 +16,7 @@
                <children>
                   <AnchorPane layoutX="244.0" layoutY="10.0" prefHeight="60.0" prefWidth="80.0">
                      <children>
-                        <Button fx:id="settingsButton" mnemonicParsing="false" onAction="#gotoSettings" prefHeight="60.0" prefWidth="80.0">
+                        <Button fx:id="settingsButton" contentDisplay="TOP" mnemonicParsing="false" onAction="#gotoSettings" prefHeight="60.0" prefWidth="80.0" text="Innstillinger">
                            <graphic>
                               <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -39,7 +39,7 @@
                <children>
                   <AnchorPane layoutX="20.0" layoutY="10.0" prefHeight="60.0" prefWidth="80.0">
                      <children>
-                        <Button fx:id="teamButton" mnemonicParsing="false" onAction="#gotoTeams" prefHeight="60.0" prefWidth="80.0">
+                        <Button fx:id="teamButton" contentDisplay="TOP" mnemonicParsing="false" onAction="#gotoTeams" prefHeight="60.0" prefWidth="80.0" text="Lag">
                            <graphic>
                               <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -51,7 +51,7 @@
                   </AnchorPane>
                   <AnchorPane layoutX="240.0" layoutY="10.0" prefHeight="60.0" prefWidth="80.0">
                      <children>
-                        <Button fx:id="trophyButton" mnemonicParsing="false" onAction="#gotoTrophies" prefHeight="60.0" prefWidth="80.0">
+                        <Button fx:id="trophyButton" contentDisplay="TOP" mnemonicParsing="false" onAction="#gotoTrophies" prefHeight="60.0" prefWidth="80.0" text="Medaljer">
                            <graphic>
                               <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -63,7 +63,7 @@
                   </AnchorPane>
                   <AnchorPane layoutX="132.0" layoutY="12.0" prefHeight="60.0" prefWidth="80.0">
                      <children>
-                        <Button fx:id="userButton" mnemonicParsing="false" onAction="#gotoUsers" prefHeight="60.0" prefWidth="80.0">
+                        <Button fx:id="userButton" contentDisplay="TOP" mnemonicParsing="false" onAction="#gotoUsers" prefHeight="60.0" prefWidth="80.0" text="Brukere">
                            <graphic>
                               <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                                  <image>

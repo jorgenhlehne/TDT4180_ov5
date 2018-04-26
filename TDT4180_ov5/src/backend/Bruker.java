@@ -1,18 +1,32 @@
 package backend;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Bruker
 {
     public int id;
     public String navn;
-    public Konkuranse minKonkuranse;
+    public Konkuranse individualCompetition, teamCompetition;
+    private List<LagBackend> teamList;
     public int skritt;
 
-    Bruker(int nyId, String nyttNavn, Konkuranse nyKonkuranse, int nySkritt)
+    public Bruker(int nyId, String nyttNavn, int nySkritt)
     {
         id = nyId;
         navn = nyttNavn;
-        minKonkuranse = nyKonkuranse;
+        individualCompetition = null;
+        teamCompetition = null;
         skritt = nySkritt;
+        teamList = new ArrayList<LagBackend>();
+    }
+    
+    public void joinIndividualCompetition(Konkuranse konkurranse) {
+    	this.individualCompetition = konkurranse;
+    }
+    
+    public void joinTeamCompetition(Konkuranse konkurranse) {
+    	this.teamCompetition = konkurranse;
     }
 
     Bruker(String nyttNavn)
