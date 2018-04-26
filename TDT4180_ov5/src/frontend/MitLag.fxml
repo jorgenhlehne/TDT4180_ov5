@@ -80,7 +80,7 @@
                         </Button>
                      </children>
                   </AnchorPane>
-                  <AnchorPane layoutX="10.0" layoutY="9.0" prefHeight="200.0" prefWidth="315.0" style="-fx-background-color: #e7e7e7;" />
+                  <AnchorPane fx:id="teamPane" layoutX="10.0" layoutY="9.0" prefHeight="200.0" prefWidth="315.0" style="-fx-background-color: #e7e7e7;" />
                </children>
             </AnchorPane>
          </center>

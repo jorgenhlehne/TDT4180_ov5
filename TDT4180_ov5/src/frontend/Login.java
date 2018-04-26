@@ -48,7 +48,7 @@ public class Login extends Application {
     }
     
     public static void gotoUsers() throws IOException {
-    	Parent root = FXMLLoader.load(Login.class.getResource("UserSearch.fxml"));
+    	Parent root = FXMLLoader.load(Login.class.getResource("Brukere.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);
     }
