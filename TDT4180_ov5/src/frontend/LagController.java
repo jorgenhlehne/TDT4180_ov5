@@ -13,7 +13,7 @@ public class LagController {
 	
 	@FXML private ListView<LagBackend> teamListView;
 	
-	private static LagBackend activeTeam;
+	public static LagBackend activeTeam;
 	
 	@FXML
 	void initialize() {

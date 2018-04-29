@@ -12,6 +12,8 @@ import javafx.scene.control.TextField;
 
 public class FinnLagController {
 	
+	private LagBackend activeTeam;
+	
 	@FXML private ListView<LagBackend> teamListView;
 	
 	@FXML private TextField teamSearchbar;
@@ -35,10 +37,20 @@ public class FinnLagController {
 			List<LagBackend> returnedList = Login.database.searchTeams(searchTerm);
 			ObservableList<LagBackend> teamListTemp = FXCollections.observableArrayList(returnedList);
 			teamListView.setItems(teamListTemp);
-			
-		}
-		
-		
+		}	
 	}
+	
+	@FXML
+	public void clickTeam() throws IOException {
+		LagController.activeTeam = teamListView.getSelectionModel().getSelectedItem();
+		activeTeam = LagController.activeTeam;
+		if (activeTeam.getLeader() == Login.currentUser) {
+			Login.gotoTeamAdmin();
+		} else {
+			Login.gotoTeamMember();
+		}
+	}
+	
+	
 
 }

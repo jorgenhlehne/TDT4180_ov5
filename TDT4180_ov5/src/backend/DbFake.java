@@ -11,6 +11,7 @@ public class DbFake {
     public String[] noenSteder = {"Maanen-sola","Bejing-Moskva","Oslo-Trondheim","Samfundet-hjem","sofaen-kjoeleskapet"};
     public String[] noenLagnavn = {"LoepeGutta","LoepeJentene","SprekeFolk","Derp","NeiTilJogging"};
     
+    private List<Bruker> userList = new ArrayList<Bruker>(); //En liste med brukere
     private List<LagBackend> teamList = new ArrayList<LagBackend>(); //En liste med lagobjekter
     
     public DbFake() {
@@ -18,14 +19,25 @@ public class DbFake {
     }
     
     public void initialize() {
+    	createUsers();
     	populateTeamList();
     }
     
     //Putter lag i listen over lag
     public void populateTeamList() {
     	for (int i = 0; i < 5; i++) {
-    		LagBackend lag = new LagBackend(noenLagnavn[i], null);
+    		LagBackend lag = new LagBackend(noenLagnavn[i], userList.get(i));
+    		lag.addMember(userList.get(i));
     		teamList.add(lag);
+    		System.out.println(teamList.get(i).getMembers());
+    	}
+    }
+    
+    public void createUsers() {
+    	for (int i = 0; i < 5; i++) {
+    		Bruker user = new Bruker(i + 2, noenNavn[i], 0);
+    		userList.add(user);
+    		System.out.println(user);
     	}
     }
     
