@@ -23,16 +23,25 @@ public class DbFake {
     
     //Putter lag i listen over lag
     public void populateTeamList() {
-    	LagBackend lag1 = new LagBackend(noenLagnavn[1], null);
-        LagBackend lag2 = new LagBackend(noenLagnavn[2], null);
-        LagBackend lag3 = new LagBackend(noenLagnavn[3], null);
-        teamList.add(lag1);
-        teamList.add(lag2);
-        teamList.add(lag3);
+    	for (int i = 0; i < 5; i++) {
+    		LagBackend lag = new LagBackend(noenLagnavn[i], null);
+    		teamList.add(lag);
+    	}
     }
     
     public List<LagBackend> getTeams() {
     	return teamList;
+    }
+    
+    public List<LagBackend> searchTeams(String searchTerm) {
+    	List<LagBackend> returnList = new ArrayList<LagBackend>();
+    	for (LagBackend lag : teamList) {
+    		String lagnavn = lag.getName();
+    		if (lagnavn.toLowerCase().contains(searchTerm.toLowerCase())) {
+    			returnList.add(lag);
+    		}
+    	}
+    	return returnList;
     }
     
     public void addTeam(LagBackend newTeam) {

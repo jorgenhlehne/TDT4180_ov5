@@ -20,7 +20,7 @@ public class LagController {
 	
 	@FXML
 	public void populateTeamList() {
-		ObservableList<LagBackend> teamListTemp = FXCollections.observableArrayList(Login.database.getTeams());
+		ObservableList<LagBackend> teamListTemp = FXCollections.observableArrayList(Login.currentUser.getTeams());
 		teamListView.setItems(teamListTemp);
 	}
 	
@@ -36,7 +36,7 @@ public class LagController {
 	
 	@FXML
 	public void searchTeams() throws IOException {
-		Login.login();
+		Login.searchTeams();
 	}
 
 }

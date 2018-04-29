@@ -35,6 +35,7 @@ public class NyttLagController {
 			List<Bruker> userListTemp = new ArrayList<Bruker>();
 			LagBackend newTeam = new LagBackend(newTeamName.getText(), null, userListTemp, Login.currentUser);
 			newTeam.addMember(Login.currentUser);
+			Login.currentUser.joinTeam(newTeam);
 			Login.database.addTeam(newTeam);
 			Login.gotoTeams();
 		}

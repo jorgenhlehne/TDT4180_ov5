@@ -23,6 +23,14 @@ public class Bruker
         teamListAdmin = new ArrayList<LagBackend>();
     }
     
+    public void joinTeam(LagBackend newTeam) {
+    	this.teamListMember.add(newTeam);
+    }
+    
+    public List<LagBackend> getTeams() {
+    	return teamListMember;
+    }
+    
     public void joinIndividualCompetition(Konkuranse konkurranse) {
     	this.individualCompetition = konkurranse;
     }

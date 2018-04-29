@@ -75,6 +75,12 @@ public class Login extends Application {
         Scene scene = new Scene(root);
         stage.setScene(scene);
     }
+    
+    public static void searchTeams() throws IOException {
+    	Parent root = FXMLLoader.load(Login.class.getResource("FinnLag.fxml"));
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+    }
 
     public static void main(String[] args) {
         launch(args);
