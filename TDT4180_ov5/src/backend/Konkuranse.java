@@ -17,4 +17,8 @@ public class Konkuranse {
         id = DbFake.nyIdKonkuranse();
         skritt = 20000;
     }
+    
+    public String toString() {
+    	return navn;
+    }
 }

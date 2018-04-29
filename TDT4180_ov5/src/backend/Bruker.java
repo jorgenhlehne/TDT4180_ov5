@@ -38,6 +38,10 @@ public class Bruker
     public void joinTeamCompetition(Konkuranse konkurranse) {
     	this.teamCompetition = konkurranse;
     }
+    
+    public String toString() {
+    	return navn;
+    }
 
     Bruker(String nyttNavn)
     {

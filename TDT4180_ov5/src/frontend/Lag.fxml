@@ -53,7 +53,7 @@
                               <Font size="21.0" />
                            </font>
                         </Text>
-                        <ListView fx:id="teamListView" layoutX="-8.0" layoutY="47.0" prefHeight="250.4" prefWidth="315.2" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="65.0" />
+                        <ListView fx:id="teamListView" layoutX="-8.0" layoutY="47.0" onMouseClicked="#clickTeam" prefHeight="250.4" prefWidth="315.2" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="65.0" />
                      </children></AnchorPane>
                   <AnchorPane layoutX="10.0" layoutY="300.0" prefHeight="120.0" prefWidth="315.0" style="-fx-background-color: #e7e7e7;">
                      <children>

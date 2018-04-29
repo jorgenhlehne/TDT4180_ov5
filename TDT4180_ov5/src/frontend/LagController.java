@@ -13,6 +13,8 @@ public class LagController {
 	
 	@FXML private ListView<LagBackend> teamListView;
 	
+	private static LagBackend activeTeam;
+	
 	@FXML
 	void initialize() {
 		populateTeamList();
@@ -37,6 +39,20 @@ public class LagController {
 	@FXML
 	public void searchTeams() throws IOException {
 		Login.searchTeams();
+	}
+	
+	@FXML
+	public void clickTeam() throws IOException {
+		activeTeam = teamListView.getSelectionModel().getSelectedItem();
+		if (activeTeam.getLeader() == Login.currentUser) {
+			Login.gotoTeamAdmin();
+		} else {
+			Login.gotoTeamMember();
+		}
+	}
+	
+	public static LagBackend getActiveTeam() {
+		return activeTeam;
 	}
 
 }

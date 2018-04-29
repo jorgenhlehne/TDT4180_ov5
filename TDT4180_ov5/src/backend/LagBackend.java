@@ -8,6 +8,7 @@ public class LagBackend
    public String lagNavn;
    public Konkuranse konkurranse;
    public List<Bruker> medlemmer;
+   private List<Konkuranse> previousCompetitions;
    
    private Bruker teamLeader;
 
@@ -18,6 +19,7 @@ public class LagBackend
    konkurranse = null;
    medlemmer = new ArrayList<Bruker>();
    teamLeader = newLeader;
+   this.previousCompetitions = new ArrayList<Konkuranse>();
    }
 
    public LagBackend(String n, Konkuranse k, List<Bruker> m, Bruker newLeader)
@@ -26,6 +28,7 @@ public class LagBackend
        konkurranse = k;
        medlemmer = m;
        teamLeader = newLeader;
+       this.previousCompetitions = new ArrayList<Konkuranse>();
    }
 
    public void addMember(Bruker b)
@@ -77,5 +80,9 @@ public class LagBackend
     
     public boolean isLeader(Bruker user) {
     	return user == teamLeader;
+    }
+    
+    public List<Konkuranse> getPreviousCompetitions(){
+    	return previousCompetitions;
     }
 }
