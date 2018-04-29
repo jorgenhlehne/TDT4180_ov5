@@ -7,7 +7,7 @@ public class RaceCardEmptyController {
 	
 	@FXML
 	public void gotoCompetitions() throws IOException {
-		Login.login();
+		Login.gotoCompetitions();
 	}
 
 }
