@@ -9,7 +9,7 @@ public class Bruker
     public String navn;
     public Konkuranse individualCompetition, teamCompetition;
     private List<LagBackend> teamListMember; //Lag man er medlem av
-    private List<LagBackend> teamListAdmin; //Lag man er admin for
+    private List<LagBackend> teamListAdmin; //Brukes ikke
     public int skritt;
 
     public Bruker(int nyId, String nyttNavn, int nySkritt)

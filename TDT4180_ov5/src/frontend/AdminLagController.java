@@ -8,7 +8,9 @@ import backend.LagBackend;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.ListView;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.control.Label;
 
 public class AdminLagController {
@@ -17,7 +19,7 @@ public class AdminLagController {
 	
 	private Konkuranse selectedCompetition;
 	
-	private LagBackend activeTeam;
+	private static LagBackend activeTeam;
 	
 	@FXML private ListView<Bruker> memberListView;
 	
@@ -25,12 +27,25 @@ public class AdminLagController {
 	
 	@FXML private Label teamNameLabel;
 	
+	@FXML AnchorPane competitionPane;
+	
 	@FXML
-	void initialize() {
+	void initialize() throws IOException {
 		activeTeam = LagController.getActiveTeam();
 		populateUserList();
 //		populateCompetitionList();
 		teamNameLabel.setText(activeTeam.getName());
+		if (activeTeam.getKonkuranse() == null) {
+			AnchorPane raceCard = FXMLLoader.load(getClass().getResource("RaceCardEmpty.fxml"));
+	        competitionPane.getChildren().add(raceCard);
+		} else {
+			AnchorPane noRace = FXMLLoader.load(getClass().getResource("RaceCard.fxml"));
+	        competitionPane.getChildren().add(noRace);
+		}
+	}
+	
+	public static void setActiveTeam(LagBackend team) {
+		activeTeam = team;
 	}
 	
 	@FXML
