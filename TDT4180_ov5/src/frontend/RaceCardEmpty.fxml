@@ -12,9 +12,9 @@
             <Font size="20.0" />
          </font>
       </Button>
-      <Text layoutX="67.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ingen Konkurranse">
+      <Text layoutX="42.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ingen individuell konkurranse">
          <font>
-            <Font size="20.0" />
+            <Font size="18.0" />
          </font>
       </Text>
    </children>

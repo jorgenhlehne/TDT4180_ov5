@@ -39,8 +39,16 @@ public class Bruker
     	this.individualCompetition = konkurranse;
     }
     
+    public void leaveIndividualCompetition() {
+    	this.individualCompetition = null;
+    }
+    
     public void joinTeamCompetition(Konkuranse konkurranse) {
     	this.teamCompetition = konkurranse;
+    }
+    
+    public void leaveTeamCompetition() {
+    	this.teamCompetition = null;
     }
     
     public String toString() {

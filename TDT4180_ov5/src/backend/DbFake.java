@@ -15,6 +15,7 @@ public class DbFake {
     
     private List<Bruker> userList = new ArrayList<Bruker>(); //En liste med brukere
     private List<LagBackend> teamList = new ArrayList<LagBackend>(); //En liste med lagobjekter
+    private List<Konkuranse> compList = new ArrayList<Konkuranse>(); //En liste med konkurranser
     
     public DbFake() {
     	initialize();
@@ -23,6 +24,7 @@ public class DbFake {
     public void initialize() {
     	createUsers();
     	populateTeamList();
+    	createCompetitions();
     }
     
     //Putter lag i listen over lag
@@ -43,12 +45,23 @@ public class DbFake {
     	}
     }
     
+    public void createCompetitions() {
+    	for (int i = 0; i < 5; i++) {
+    		Konkuranse comp = new Konkuranse("Konkurranse " + i);
+    		compList.add(comp);
+    	}
+    }
+    
     public List<LagBackend> getTeams() {
     	return teamList;
     }
     
     public List<Bruker> getUsers() {
     	return userList;
+    }
+    
+    public List<Konkuranse> getCompetitions() {
+    	return compList;
     }
     
     public List<LagBackend> searchTeams(String searchTerm) {

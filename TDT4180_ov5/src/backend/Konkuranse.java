@@ -6,7 +6,7 @@ public class Konkuranse {
     String navn;
     int skritt;
 
-    Konkuranse(int nyId, String nyttNavn, int nySkritt)
+    public Konkuranse(int nyId, String nyttNavn, int nySkritt)
     {
         id = nyId; navn = nyttNavn; skritt = nySkritt;
     }

@@ -24,7 +24,7 @@ public class HomeController {
 			AnchorPane raceCard = FXMLLoader.load(getClass().getResource("RaceCard.fxml"));
 	        individualPane.getChildren().add(raceCard);
 		} else {
-			AnchorPane noRace = FXMLLoader.load(getClass().getResource("RaceCardEmpty.fxml"));
+			AnchorPane noRace = FXMLLoader.load(getClass().getResource("RaceCardEmptyTeam.fxml"));
 	        teamPane.getChildren().add(noRace);
 		}
 	}
