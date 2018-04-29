@@ -95,7 +95,7 @@ public class Login extends Application {
     }
     
     public static void gotoUser() throws IOException {
-    	Parent root = FXMLLoader.load(Login.class.getResource("Home.fxml"));
+    	Parent root = FXMLLoader.load(Login.class.getResource("annenbruker.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);
     }

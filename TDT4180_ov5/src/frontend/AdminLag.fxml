@@ -78,7 +78,7 @@
                      </children></AnchorPane>
                   <AnchorPane layoutX="10.0" layoutY="386.0" prefHeight="44.0" prefWidth="315.0" style="-fx-background-color: #e7e7e7;">
                      <children>
-                        <Button fx:id="disbandTeamButton" layoutX="161.0" layoutY="3.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="150.0" text="Oppløs Lag">
+                        <Button fx:id="disbandTeamButton" layoutX="161.0" layoutY="3.0" mnemonicParsing="false" onAction="#disbandTeam" prefHeight="38.0" prefWidth="150.0" text="Oppløs Lag">
                            <font>
                               <Font size="19.0" />
                            </font>

@@ -11,6 +11,8 @@ public class DbFake {
     public String[] noenSteder = {"Maanen-sola","Bejing-Moskva","Oslo-Trondheim","Samfundet-hjem","sofaen-kjoeleskapet"};
     public String[] noenLagnavn = {"LoepeGutta","LoepeJentene","SprekeFolk","Derp","NeiTilJogging"};
     
+    public Bruker activeUser;
+    
     private List<Bruker> userList = new ArrayList<Bruker>(); //En liste med brukere
     private List<LagBackend> teamList = new ArrayList<LagBackend>(); //En liste med lagobjekter
     
@@ -45,6 +47,10 @@ public class DbFake {
     	return teamList;
     }
     
+    public List<Bruker> getUsers() {
+    	return userList;
+    }
+    
     public List<LagBackend> searchTeams(String searchTerm) {
     	List<LagBackend> returnList = new ArrayList<LagBackend>();
     	for (LagBackend lag : teamList) {
@@ -56,8 +62,23 @@ public class DbFake {
     	return returnList;
     }
     
+    public List<Bruker> searchUsers(String searchTerm) {
+    	List<Bruker> returnList = new ArrayList<Bruker>();
+    	for (Bruker user : userList) {
+    		String brukernavn = user.toString();
+    		if (brukernavn.toLowerCase().contains(searchTerm.toLowerCase())) {
+    			returnList.add(user);
+    		}
+    	}
+    	return returnList;
+    }
+    
     public void addTeam(LagBackend newTeam) {
     	teamList.add(newTeam);
+    }
+    
+    public void removeTeam(LagBackend team) {
+    	teamList.remove(team);
     }
 
     static public int nyIdBruker()

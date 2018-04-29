@@ -100,6 +100,7 @@ public class MitLagController {
 	@FXML
 	public void clickMember() throws IOException {
 		selectedUser = memberListView.getSelectionModel().getSelectedItem();
+		Login.database.activeUser = selectedUser;
 		Login.gotoUser();
 	}
 	

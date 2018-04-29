@@ -54,7 +54,7 @@
                               <content>
                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                        <children>
-                                          <ListView fx:id="memberListView" layoutY="-4.0" prefHeight="132.0" prefWidth="319.0" />
+                                          <ListView fx:id="memberListView" layoutY="-4.0" onMouseClicked="#clickMember" prefHeight="132.0" prefWidth="319.0" />
                                        </children>
                                     </AnchorPane>
                               </content>

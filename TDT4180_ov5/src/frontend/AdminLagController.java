@@ -69,7 +69,18 @@ public class AdminLagController {
 	@FXML
 	public void clickMember() throws IOException {
 		selectedUser = memberListView.getSelectionModel().getSelectedItem();
+		Login.database.activeUser = selectedUser;
 		Login.gotoUser();
+	}
+	
+	@FXML
+	public void disbandTeam() throws IOException {
+		Login.gotoTeams();
+		for(Bruker user : activeTeam.getMembers()) {
+			user.leaveTeam(activeTeam);
+			activeTeam.removeMember(user);
+		}
+		Login.database.removeTeam(activeTeam);
 	}
 	
 	/*

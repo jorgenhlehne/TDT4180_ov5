@@ -28,6 +28,7 @@ public class FinnLagController {
 		Login.gotoTeams();
 	}
 	
+	@FXML
 	public void findTeams() {
 		if (teamSearchbar.getText().isEmpty()) {
 			ObservableList<LagBackend> teamListTemp = FXCollections.observableArrayList(Login.database.getTeams());
