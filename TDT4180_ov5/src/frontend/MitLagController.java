@@ -12,6 +12,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.control.Button;
 
 public class MitLagController {
 	
@@ -23,11 +24,15 @@ public class MitLagController {
 	
 	private static LagBackend activeTeam;
 	
+	private boolean isMember;
+	
 	@FXML private ListView<Bruker> memberListView;
 	
 //	@FXML private ListView<Konkuranse> competitionsListView; //Denne fungerer ikke av en eller annen grunn
 	
 	@FXML private Label teamNameLabel;
+	
+	@FXML private Button teamMembershipButton;
 	
 	@FXML
 	void initialize() throws IOException {
@@ -42,10 +47,41 @@ public class MitLagController {
 			AnchorPane noRace = FXMLLoader.load(getClass().getResource("RaceCard.fxml"));
 	        teamPane.getChildren().add(noRace);
 		}
+		if (activeTeam.getMembers().contains(Login.currentUser)) {
+			isMember = true;
+		} else {
+			isMember = false;
+		}
+		setButtonText();
 	}
 	
 	public static void setActiveTeam(LagBackend team) {
 		activeTeam = team;
+	}
+	
+	public void setButtonText() {
+		if (isMember) {
+			teamMembershipButton.setText("Forlat lag");
+		} else {
+			teamMembershipButton.setText("Bli medlem");
+		}
+	}
+	
+	@FXML
+	public void clickMembershipButton() {
+		if (isMember) {
+			activeTeam.removeMember(Login.currentUser);
+			Login.currentUser.leaveTeam(activeTeam);
+			isMember = false;
+			setButtonText();
+			populateUserList();
+		} else {
+			activeTeam.addMember(Login.currentUser);
+			Login.currentUser.joinTeam(activeTeam);
+			isMember = true;
+			setButtonText();
+			populateUserList();
+		}
 	}
 	
 	@FXML

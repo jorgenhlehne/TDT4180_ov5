@@ -73,7 +73,7 @@
                      </children></AnchorPane>
                   <AnchorPane layoutX="10.0" layoutY="386.0" prefHeight="44.0" prefWidth="315.0" style="-fx-background-color: #e7e7e7;">
                      <children>
-                        <Button fx:id="leaveTeamButton" layoutX="90.0" layoutY="3.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="150.0" text="Forlat Lag">
+                        <Button fx:id="teamMembershipButton" layoutX="90.0" layoutY="3.0" mnemonicParsing="false" onAction="#clickMembershipButton" prefHeight="38.0" prefWidth="150.0" text="Forlat Lag">
                            <font>
                               <Font size="19.0" />
                            </font>

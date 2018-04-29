@@ -27,6 +27,10 @@ public class Bruker
     	this.teamListMember.add(newTeam);
     }
     
+    public void leaveTeam(LagBackend team) {
+    	this.teamListMember.remove(team);
+    }
+    
     public List<LagBackend> getTeams() {
     	return teamListMember;
     }
