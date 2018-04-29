@@ -29,7 +29,7 @@
                <children>
                   <AnchorPane layoutX="132.0" layoutY="12.0" prefHeight="60.0" prefWidth="80.0">
                      <children>
-                        <Button fx:id="homeButton" mnemonicParsing="false" onAction="#gotoHome" prefHeight="60.0" prefWidth="80.0">
+                        <Button fx:id="homeButton" contentDisplay="TOP" mnemonicParsing="false" onAction="#gotoHome" prefHeight="60.0" prefWidth="80.0" text="Home">
                            <graphic>
                               <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                                  <image>

@@ -26,30 +26,8 @@
          <bottom>
             <AnchorPane prefHeight="80.0" prefWidth="335.0" style="-fx-background-color: #e7e7e7;" BorderPane.alignment="CENTER">
                <children>
-                  <AnchorPane layoutX="20.0" layoutY="10.0" prefHeight="60.0" prefWidth="80.0">
-                     <children>
-                        <Button fx:id="teamButton" contentDisplay="TOP" mnemonicParsing="false" prefHeight="60.0" prefWidth="80.0" text="Lag">
-                           <graphic>
-                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@img/team.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic></Button>
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane layoutX="240.0" layoutY="10.0" prefHeight="60.0" prefWidth="80.0">
-                     <children>
-                        <Button fx:id="trophyButton" contentDisplay="TOP" mnemonicParsing="false" prefHeight="60.0" prefWidth="80.0" text="Medaljer">
-                           <graphic>
-                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@img/240px-Trophy_font_awesome.svg.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic></Button>
-                     </children>
-                  </AnchorPane>
+                  <AnchorPane layoutX="20.0" layoutY="10.0" prefHeight="60.0" prefWidth="80.0" />
+                  <AnchorPane layoutX="240.0" layoutY="10.0" prefHeight="60.0" prefWidth="80.0" />
                   <AnchorPane layoutX="132.0" layoutY="12.0" prefHeight="60.0" prefWidth="80.0">
                      <children>
                         <Button fx:id="userButton" contentDisplay="TOP" mnemonicParsing="false" onAction="#gotoHome" prefHeight="60.0" prefWidth="80.0" text="Home">

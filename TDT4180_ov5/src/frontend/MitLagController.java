@@ -41,8 +41,8 @@ public class MitLagController {
 //		populateCompetitionList();
 		teamNameLabel.setText(activeTeam.getName());
 		if (activeTeam.getKonkuranse() == null) {
-			AnchorPane raceCard = FXMLLoader.load(getClass().getResource("RaceCardEmpty.fxml"));
-	        teamPane.getChildren().add(raceCard);
+//			AnchorPane raceCard = FXMLLoader.load(getClass().getResource("RaceCardEmpty.fxml"));
+//	        teamPane.getChildren().add(raceCard);
 		} else {
 			AnchorPane noRace = FXMLLoader.load(getClass().getResource("RaceCard.fxml"));
 	        teamPane.getChildren().add(noRace);

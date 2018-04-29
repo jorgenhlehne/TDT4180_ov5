@@ -33,7 +33,6 @@ public class DbFake {
     		LagBackend lag = new LagBackend(noenLagnavn[i], userList.get(i));
     		lag.addMember(userList.get(i));
     		teamList.add(lag);
-    		System.out.println(teamList.get(i).getMembers());
     	}
     }
     
@@ -41,7 +40,6 @@ public class DbFake {
     	for (int i = 0; i < 5; i++) {
     		Bruker user = new Bruker(i + 2, noenNavn[i], 0);
     		userList.add(user);
-    		System.out.println(user);
     	}
     }
     

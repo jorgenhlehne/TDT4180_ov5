@@ -36,10 +36,10 @@ public class AdminLagController {
 //		populateCompetitionList();
 		teamNameLabel.setText(activeTeam.getName());
 		if (activeTeam.getKonkuranse() == null) {
-			AnchorPane raceCard = FXMLLoader.load(getClass().getResource("RaceCardEmpty.fxml"));
+			AnchorPane raceCard = FXMLLoader.load(getClass().getResource("RaceCardEmptyTeam2.fxml"));
 	        competitionPane.getChildren().add(raceCard);
 		} else {
-			AnchorPane noRace = FXMLLoader.load(getClass().getResource("RaceCard.fxml"));
+			AnchorPane noRace = FXMLLoader.load(getClass().getResource("RaceCardTeam.fxml"));
 	        competitionPane.getChildren().add(noRace);
 		}
 	}

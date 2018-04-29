@@ -35,7 +35,7 @@
                <children>
                   <AnchorPane layoutX="132.0" layoutY="12.0" prefHeight="60.0" prefWidth="80.0">
                      <children>
-                        <Button fx:id="homeButton" mnemonicParsing="false" onAction="#gotoHome" prefHeight="60.0" prefWidth="80.0">
+                        <Button fx:id="homeButton" contentDisplay="TOP" mnemonicParsing="false" onAction="#gotoHome" prefHeight="60.0" prefWidth="80.0" text="Home">
                            <graphic>
                               <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -78,12 +78,7 @@
                      </children></AnchorPane>
                   <AnchorPane layoutX="10.0" layoutY="386.0" prefHeight="44.0" prefWidth="315.0" style="-fx-background-color: #e7e7e7;">
                      <children>
-                        <Button fx:id="disbandTeamButton" layoutX="161.0" layoutY="3.0" mnemonicParsing="false" onAction="#disbandTeam" prefHeight="38.0" prefWidth="150.0" text="Oppløs Lag">
-                           <font>
-                              <Font size="19.0" />
-                           </font>
-                        </Button>
-                        <Button fx:id="findMemberButton" layoutX="6.0" layoutY="3.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="150.0" text="Finn Medlem">
+                        <Button fx:id="disbandTeamButton" layoutX="82.0" layoutY="1.0" mnemonicParsing="false" onAction="#disbandTeam" prefHeight="38.0" prefWidth="150.0" text="Oppløs Lag">
                            <font>
                               <Font size="19.0" />
                            </font>

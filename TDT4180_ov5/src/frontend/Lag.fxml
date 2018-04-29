@@ -2,7 +2,6 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ListView?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -62,12 +61,7 @@
                               <Font size="21.0" />
                            </font>
                         </Text>
-                        <TextField fx:id="searchTeamTextfield" layoutX="25.0" layoutY="47.0" prefHeight="49.0" prefWidth="206.0" promptText="Lagnavn">
-                           <font>
-                              <Font size="16.0" />
-                           </font>
-                        </TextField>
-                        <Button fx:id="searchTeamButton" layoutX="239.0" layoutY="49.0" mnemonicParsing="false" onAction="#searchTeams" prefHeight="45.0" prefWidth="62.0" text="Søk">
+                        <Button fx:id="searchTeamButton" layoutX="63.0" layoutY="52.0" mnemonicParsing="false" onAction="#searchTeams" prefHeight="45.0" prefWidth="200.0" text="Gå til søkesiden">
                            <font>
                               <Font size="17.0" />
                            </font>
