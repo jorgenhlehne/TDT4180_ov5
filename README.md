@@ -9,5 +9,3 @@ TODO:
 - Implementere funksjonalitet for å melde seg av/på individuelle konkurranser
 - Implementere funksjonalitet for å melde laget sitt av/på konkurranser
 - MAYBE: Implementere funksjonalitet for å melde seg av/på lagkonkurranser
-- Fikse laglista slik at man kan klikke på forskjellige lag og bli tatt inn til lagsiden (Jørgen prøver å fikse på søndag)
-- 
